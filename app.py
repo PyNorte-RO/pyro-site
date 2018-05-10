@@ -5,9 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    a=23
-    return 'Hello World!'
 
+    return 'Hello World!'
 
 if __name__ == '__main__':
     app.config.update(
@@ -16,7 +15,4 @@ if __name__ == '__main__':
         DEBUG=True
     )
 
-    app.run(
-        host='0.0.0.0',
-        port=5000
-    )
+    app.run(host='0.0.0.0', port=5000)

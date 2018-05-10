@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    # command: "python app.py"
+    command: "gunicorn -w 4 -b 0.0.0.0:5000 app:app"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3.7.9-jessie
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: senha
