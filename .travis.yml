@@ -13,4 +13,4 @@ before_script:
   - export FLASK_DEBUG=1
 
 script:
-  - pytest
+  - pytest --cov=web tests
