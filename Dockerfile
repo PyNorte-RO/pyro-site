@@ -10,7 +10,6 @@ RUN python3 -m ensurepip && \
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN rm -r /usr/lib/python*/ensurepip && \
-    rm -r /root/.cache
+RUN rm -r /root/.cache
 
 EXPOSE 5000
