@@ -6,4 +6,4 @@ before_script:
 
 test:
   script:
-  - pytest
+  - pytest --cov=web tests

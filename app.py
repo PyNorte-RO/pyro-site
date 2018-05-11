@@ -1,14 +1,9 @@
-from flask import Flask
+from web import create_app
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-
-    return 'Hello World!'
 
 if __name__ == '__main__':
+    app = create_app()
+
     app.config.update(
         TESTING=True,
         SECRET_KEY=b'insira_uma_key_aqui',
