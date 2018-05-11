@@ -1,9 +1,5 @@
 image: python:3.6.5
 
-cache:
-  paths:
-    - ~/.cache/pip
-
 before_script:
   - python -V
   - pip install -r requirements.txt
